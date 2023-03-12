@@ -1,3 +1,5 @@
+server:
+  port: 8080
 spring:
   application:
     name: payment-gateway
@@ -10,4 +12,4 @@ spring:
     stream:
       bindings:
         log-in-0:
-          group: log-queue
+          group: log-ingester
