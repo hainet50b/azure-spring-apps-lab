@@ -3,6 +3,7 @@ package com.programacho.paymentgateway.config;
 import com.github.fridujo.rabbitmq.mock.MockConnectionFactory;
 import org.springframework.amqp.rabbit.connection.CachingConnectionFactory;
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -13,9 +14,11 @@ import org.springframework.web.client.RestTemplate;
 public class AppConfig {
 
     @Bean
-    public RestTemplate restTemplate(RestTemplateBuilder builder) {
+    public RestTemplate restTemplate(
+            RestTemplateBuilder builder,
+            @Value("${credit-service.root-uri}") String rootUri) {
         return builder
-                .rootUri("http://localhost:8081")
+                .rootUri(rootUri)
                 .build();
     }
 
