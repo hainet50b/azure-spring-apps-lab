@@ -21,10 +21,10 @@ public class CreditController {
 
     @PostMapping("/authorize")
     public String authorize() {
-        // TODO: リクエストボディとレスポンスボディをメッセージブローカー経由で記録する機能を実装する。
-        streamBridge.send("log-out-0", "クレジット与信を取得します。");
+        // TODO: 対向決済機関への通信をメッセージブローカー経由で記録する機能を実装する。
+        streamBridge.send("log-out-0", "クレジットシステムに与信の取得を依頼します。");
 
-        log.info("クレジット与信を取得します。");
+        log.info("クレジットシステムに与信の取得を依頼します。");
 
         return "ok";
     }
