@@ -33,10 +33,10 @@ public class ExchangeLogService {
             ExchangeLog exchangeLog) {
         streamBridge.send("log-out-0", Map.of(
                 "type", type.getValue(),
-                "method", exchangeLog.method(),
+                "method", exchangeLog.method().name(),
                 "endpoint", exchangeLog.endpoint(),
-                "status", exchangeLog.status() != null ? exchangeLog.status().value() : "",
-                "headers", exchangeLog.headers(),
+                "status", exchangeLog.status() != null ? String.valueOf(exchangeLog.status().value()) : "",
+                "headers", exchangeLog.headers().toString(),
                 "body", exchangeLog.body() != null ? exchangeLog.body() : "",
                 "timestamp", exchangeLog.timestamp()
         ));

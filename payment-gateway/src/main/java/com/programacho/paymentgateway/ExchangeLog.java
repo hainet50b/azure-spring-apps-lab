@@ -2,14 +2,14 @@ package com.programacho.paymentgateway;
 
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
-import org.springframework.http.HttpStatus;
+import org.springframework.http.HttpStatusCode;
 
 import java.time.LocalDateTime;
 
 public record ExchangeLog(
         HttpMethod method,
         String endpoint,
-        HttpStatus status,
+        HttpStatusCode status,
         HttpHeaders headers,
         String body,
         LocalDateTime timestamp

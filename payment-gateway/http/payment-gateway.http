@@ -1,0 +1,9 @@
+### /credit/authorize
+POST http://localhost:8080/credit/authorize
+Content-Type: application/json
+
+{
+  "user": "programacho.com",
+  "token": "4111110000001111",
+  "amount": 1000
+}
