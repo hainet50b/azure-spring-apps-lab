@@ -1,8 +1,18 @@
 server:
   port: 8070
+logging:
+  level:
+    com.programacho.*: DEBUG
 spring:
   application:
     name: log-ingester
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:log-ingester
+    username: sa
+    password: ""
+  flyway:
+    locations: "classpath:db/migration"
   rabbitmq:
     host: localhost
     port: 5672
@@ -14,7 +24,6 @@ spring:
       bindings:
         log-in-0:
           destination: log-ingester
-
 ---
 spring.config.activate.on-profile: cloud
 spring:
