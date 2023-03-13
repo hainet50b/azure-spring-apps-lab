@@ -31,6 +31,9 @@ spring:
     exclude: org.springframework.boot.autoconfigure.amqp.RabbitAutoConfiguration
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
+    url: ${spring.datasource.log_ingester.mysql_flexible.url}
+    username: ${spring.datasource.log_ingester.mysql_flexible.username}
+    password: ${spring.datasource.log_ingester.mysql_flexible.password}
   cloud:
     stream:
       default-binder: servicebus
