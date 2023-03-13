@@ -1,5 +1,5 @@
 CREATE TABLE exchange_log (
-    id INT AUTO_INCREMENT,
+    id INT AUTO_INCREMENT PRIMARY KEY,
     type VARCHAR(10),
     method VARCHAR(10),
     endpoint VARCHAR(256),
