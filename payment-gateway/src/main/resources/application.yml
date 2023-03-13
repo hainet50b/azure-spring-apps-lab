@@ -31,4 +31,4 @@ spring:
             producer:
               entity-type: queue
 credit-service:
-  root-uri: https://dev-pf-asc-credit-service/azuremicroservices.io
+  root-uri: https://dev-pf-asc-credit-service.azuremicroservices.io
