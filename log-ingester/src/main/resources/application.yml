@@ -30,7 +30,7 @@ spring:
   autoconfigure:
     exclude: org.springframework.boot.autoconfigure.amqp.RabbitAutoConfiguration
   datasource:
-    driver-class-name: com.mysql.jdbc.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
     url: ${spring.datasource.log_ingester.mysql_flexible.url}
     username: ${spring.datasource.log_ingester.mysql_flexible.username}
     password: ${spring.datasource.log_ingester.mysql_flexible.password}
