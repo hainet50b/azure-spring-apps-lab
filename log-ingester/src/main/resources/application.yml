@@ -31,6 +31,8 @@ spring:
     exclude: org.springframework.boot.autoconfigure.amqp.RabbitAutoConfiguration
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://${AZURE_MYSQL_HOST}:${AZURE_MYSQL_PORT}/${AZURE_MYSQL_DATABASE}
+    username: ${mysql-flexible-user}
     password: ${mysql-flexible-password}
   cloud:
     stream:
