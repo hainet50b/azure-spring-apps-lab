@@ -7,3 +7,13 @@ Content-Type: application/json
   "user": "programacho.com",
   "amount": 1000
 }
+
+### /authorize on Azure
+POST https://dev-pf-asc-credit-service.azuremicroservices.io/authorize
+Content-Type: application/json
+
+{
+  "token": "4111110000001111",
+  "user": "programacho.com",
+  "amount": 1000
+}
