@@ -41,7 +41,7 @@ spring:
       keyvault:
         secret:
           property-sources:
-            - name: dev-pf-akv
+            - name: azure-key-vaults
               endpoint: ${azure.keyvault.uri}
               credential:
                 managed-identity-enabled: true
