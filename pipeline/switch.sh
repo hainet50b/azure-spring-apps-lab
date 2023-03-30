@@ -15,4 +15,4 @@ az spring app set-deployment \
   -g $RESOURCE_GROUP \
   -s $SERVICE_NAME \
   -n $APPLICATION_NAME \
-  -d $Deployment
+  -d $DEPLOYMENT
