@@ -17,7 +17,7 @@ public class CreditServiceController {
     public CreditAuthorizeResponse authorize(@RequestBody CreditAuthorizeRequest request) {
         log.info("クレジットカードの与信を取得します。");
 
-        final CreditAuthorizeResponse response = new CreditAuthorizeResponse(
+        CreditAuthorizeResponse response = new CreditAuthorizeResponse(
                 "ok",
                 UUID.randomUUID().toString(),
                 null
